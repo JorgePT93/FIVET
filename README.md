@@ -1,12 +1,12 @@
-# Projecto FIVET
+# Proyecto FIVET
 
 **Course**:  Pr. Desarrollo Integración Soluciones.
 
 **Degree**: Ingenieria en Computacion e Informatica.
 
-Foobar is a Python library for dealing with word pluralization.
+This project is for a Ficha de Veterinario.
 
-## Developers
+## Developer
 
 Jorge Ignacio Pizarro Tapia
 
