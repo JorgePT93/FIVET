@@ -27,6 +27,109 @@
 module model {
 
     /**
+     * Class Persona
+     */
+    class Persona{
+
+       /**
+        * PK
+        */
+       int id;
+
+       /**
+        * Rut: 81.518.400-9
+        */
+       string rut;
+
+       /**
+        * Nombre
+        */
+       string nombre;
+
+       /**
+         * Direccion
+         */
+       string direccion;
+
+       /**
+        * Telefono fijo: +56 55 2355000
+        */
+       long telefonoFijo;
+
+       /**
+        * Telefono movil: +569 8123 4567
+        */
+       long telefonoMofil;
+
+       /**
+        * Correo Electronico
+        */
+       string email;
+    }
+
+    /**
+     * Class Ficha
+     */
+    class ficha{
+
+      /**
+       * PK
+       */
+      int id;
+
+      /**
+       * Numero: 1554
+       */
+      int numeroFicha;
+
+      /**
+       * Nombre del Paciente: Luca
+       */
+      string nombrePaciente;
+
+      /**
+       * Especie: Canino
+       */
+      string especie;
+
+      /**
+       * Fecha de Nacimiento (Edad)
+       * Format: ISO_ZONED_DATE_TIME
+       */
+      string fechaDeNacimiento;
+
+      /**
+       * Raza: Labrador
+       */
+      string raza;
+
+      /**
+       * Sexo: Macho/Hembra
+       */
+      string sexo;
+
+      /**
+       * Color: Negro
+       */
+      string color;
+
+      /**
+       * Tipo
+       */
+      string tipo;
+
+    }
+
+    /**
+     * Class Foto
+     */
+    class foto{
+      /**
+       * URL/Nombre
+       */
+    }
+
+    /**
      * The base system.
      */
      interface TheSystem {
