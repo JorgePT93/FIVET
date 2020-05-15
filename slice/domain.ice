@@ -28,6 +28,7 @@ module model {
 
     /**
      * Class Persona
+     * @author Jorge Pizarro-Tapia
      */
     class Persona{
 
@@ -47,8 +48,8 @@ module model {
        string nombre;
 
        /**
-         * Direccion
-         */
+        * Direccion
+        */
        string direccion;
 
        /**
@@ -68,9 +69,26 @@ module model {
     }
 
     /**
-     * Class Ficha
+     * The Sexo
+     * @author Jorge Pizarro-Tapia
      */
-    class ficha{
+    enum Sexo{
+        MACHO,
+        HEMBRA
+    }
+    /**
+     * The TipoPaciente
+     * @author Jorge Pizarro-Tapia
+     */
+    enum TipoPaciente{
+        INTERNO,
+        EXTERNO
+    }
+    /**
+     * Class Ficha
+     * @author Jorge Pizarro-Tapia
+     */
+    class Ficha{
 
       /**
        * PK
@@ -80,12 +98,12 @@ module model {
       /**
        * Numero: 1554
        */
-      int numeroFicha;
+      int numero;
 
       /**
        * Nombre del Paciente: Luca
        */
-      string nombrePaciente;
+      string nombre;
 
       /**
        * Especie: Canino
@@ -106,7 +124,7 @@ module model {
       /**
        * Sexo: Macho/Hembra
        */
-      string sexo;
+      Sexo sexo;
 
       /**
        * Color: Negro
@@ -114,19 +132,144 @@ module model {
       string color;
 
       /**
-       * Tipo
+       * Tipo de Paciente
        */
-      string tipo;
+      TipoPaciente tipoPaciente;
 
     }
-
     /**
      * Class Foto
+     * @author Jorge Pizarro-Tapia
      */
-    class foto{
+    class Foto{
       /**
        * URL/Nombre
        */
+    }
+
+    /**
+     * Class Control
+     * @author Jorge Pizarro-Tapia
+     */
+    class Control{
+
+      /**
+       * PK
+       */
+      int id;
+
+      /**
+       * Fecha
+       */
+      string fecha;
+
+      /**
+       * Proximo Control
+       */
+      string proximoControl;
+
+      /**
+       * Temperatura
+       */
+      string temperatura;
+
+      /**
+       * Peso
+       */
+      double peso;
+
+      /**
+       * Altura
+       */
+      double altura;
+
+      /**
+       * Diagnostico
+       */
+      string diagnostico;
+
+      /**
+       * Veterinario
+       */
+      string veterinario;
+    }
+
+    /**
+     * Class Examen
+     * @author Jorge Pizarro-Tapia
+     */
+    class Examen{
+
+        /**
+         * PK
+         */
+        int id;
+
+        /**
+         *  Nombre
+         */
+        string nombre;
+
+        /**
+         * Fecha
+         */
+        string fecha;
+    }
+
+    /**
+     * The Contratos
+     */
+    interface Contratos{
+
+        /**
+         * Dado el ingreso de una nueva ficha, retorna dicha ficha:
+         * @param ficha nueva a ingresar
+         * @return the ficha
+         */
+        Ficha ingresarFicha(Ficha ficha);
+
+        /**
+         * Dado un numero de ficha, retorna la ficha asociada:
+         * @param numero de la ficha a obtener
+         * @return the Ficha
+         */
+        Ficha obtenerFicha(int numero);
+
+        /**
+         * Dado el ingreso de un nuevo dueno(Persona), retorna dicho dueno:
+         * @param Persona nueva a ingresar
+         * @return the Persona
+         */
+        Persona ingresarDueno(Persona dueno);
+
+        /**
+         * Dado un rut asociado, retorna el dueno(Persona) asociado:
+         * @param numero de la Persona a obtener
+         * @return the Persona
+         */
+        Persona obtenerDueno(string rut);
+
+        /**
+         * Dado el ingreso de un nuevo Control, retorna dicho Control:
+         * @param Control nuevo a ingresar
+         * @return the Control
+         */
+        Control ingresarControl(Control control);
+
+        /**
+         * Dado el ingreso de una nueva foto, retorna dicha foto:
+         * @param Foto nueva a ingresar
+         * @return the Foto
+         */
+        Foto ingresarFoto(Foto foto);
+
+
+        /**
+         * Dado el ingreso de un nuevo Examen, retorna dicho Examen:
+         * @param Examen nuevo a ingresar
+         * @return the Examen
+         */
+        Examen ingresarExamen(Examen examen);
     }
 
     /**
