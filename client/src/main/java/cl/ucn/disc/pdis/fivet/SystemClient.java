@@ -52,7 +52,6 @@ public final class SystemClient {
 
     /**
      * The main file
-     *
      * @param args to use.
      */
     public static void main(String[] args) {
