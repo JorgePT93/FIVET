@@ -254,7 +254,7 @@ module model {
          * @param Control nuevo a ingresar
          * @return the Control
          */
-        Control ingresarControl(Control control);
+        Control ingresarControl(int numeroFicha, Control control);
 
         /**
          * Dado el ingreso de una nueva foto, retorna dicha foto:
